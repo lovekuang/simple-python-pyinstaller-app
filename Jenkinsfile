@@ -2,10 +2,7 @@ pipeline {
     agent none 
     stages {
         stage('Build') { 
-            agent { 
-                node 
-                { label 'master'} 
-            }
+            agent any
             steps {
                 bat 'python -m py_compile sources/add2vals.py sources/calc.py' 
             }
