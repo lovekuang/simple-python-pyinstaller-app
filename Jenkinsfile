@@ -4,8 +4,8 @@ pipeline {
         stage('Build') { 
             agent { 
                 node {
-                    label "master"
-                    label1 "jenkins-slaves-1"
+                    label 'master'
+                    label1 'jenkins-slaves-1'
                 }
             }
             steps {
